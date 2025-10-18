@@ -85,10 +85,12 @@ Pipeline ETL completo que extrae, transforma y analiza datos de artistas musical
 ## 📈 Visualizaciones
 
 ### Dashboard Principal
-![Dashboard](spotify_dashboard_final.png)
+![Dashboard](images/spotify_dashboard_final.png)
 
 ### Análisis de Géneros
-![Géneros](analisis_generos.png)
+![Géneros](images/analisis_generos.png)
+
+
 
 ## 🚀 Cómo Ejecutar
 
@@ -139,11 +141,10 @@ spotify-analytics/
 ├── data/
 │   └── tu_archivo-2.csv           # Dataset
 ├── outputs/
-│   ├── spotify_dashboard_final.png
-│   ├── analisis_generos.png
-│   └── spotify_analysis_report.txt
-└── notebooks/
-    └── exploratory_analysis.ipynb
+    ├── spotify_dashboard_final.png
+    ├── analisis_generos.png
+    └── spotify_analysis_report.txt
+
 ```
 
 ## 📊 Métricas Calculadas
