@@ -141,13 +141,19 @@ spotify-analytics/
 ├── data/
 │   └── tu_archivo-2.csv           # Dataset
 ├── outputs/
+<<<<<<< HEAD
     ├── spotify_dashboard_final.png
     ├── analisis_generos.png
     └── spotify_analysis_report.txt
+=======
+│   ├── spotify_dashboard_final.png
+│   ├── analisis_generos.png
+│   └── spotify_analysis_report.txt
+>>>>>>> d12e77cc98c7c18633956a45566735afbefa2a17
 
 ```
 
-## 📊 Métricas Calculadas
+## 📊 Métricas Calculadas Scrip aparte no compartido
 
 ### Engagement Rate
 ```python
@@ -212,7 +218,7 @@ diversity_score = (genres_count / max_genres) * 100
 - [ ] Implementar predicción de popularidad con ML
 - [ ] Crear dashboard interactivo con Streamlit/Dash
 - [ ] Automatizar con Apache Airflow para datos en tiempo real
-- [ ] Expandir a análisis de playlists y tendencias
+- [ ] Añadir a Git los proyectod de Data Analisis usados para las metricas
 
 ## 🤝 Contribuciones
 
@@ -231,16 +237,14 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 ## 👤 Autor
 
 **Jesika Berroteran**
-
-- GitHub: [@tu-usuario](https://github.com/tu-usuario)
-- LinkedIn: [tu-perfil](https://linkedin.com/in/tu-perfil)
-- Email: tu-email@ejemplo.com
+- GitHub: [@Jesikab10](https://github.com/Jesikab10)
+- LinkedIn: [linkedin.com/in/jesika-berroteran](https://www.linkedin.com/in/jesika-berroteran-b16a3a32)
+- Email: jesika.berroteran@gmail.com
 
 ## 🙏 Agradecimientos
 
 - [Spotify Web API](https://developer.spotify.com/documentation/web-api/) por proporcionar los datos
 - [CoderHouse](https://www.coderhouse.com/) por la formación en Data Engineering
-- Comunidad de Data Science en Python
 
 ---
 
