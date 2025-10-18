@@ -137,19 +137,20 @@ spotify-analytics/
 ├── requirements.txt
 ├── .env.example
 ├── .gitignore
-├── spotify_analytics_portfolio.py  # Script principal
+├── src/
+│   ├── main.py
+│   ├── extract.py
+│   ├── transform.py
+│   └── load_*.py
+├── dags/
+│   └── spotify_dag.py
 ├── data/
-│   └── tu_archivo-2.csv           # Dataset
-├── outputs/
-<<<<<<< HEAD
+│   ├── outputs/
+│   │   └── spotify_data_latest.csv
+│   └── spotify_analytics.db
+└── images/
     ├── spotify_dashboard_final.png
-    ├── analisis_generos.png
-    └── spotify_analysis_report.txt
-=======
-│   ├── spotify_dashboard_final.png
-│   ├── analisis_generos.png
-│   └── spotify_analysis_report.txt
->>>>>>> d12e77cc98c7c18633956a45566735afbefa2a17
+    └── analisis_generos.png
 
 ```
 
@@ -224,11 +225,9 @@ diversity_score = (genres_count / max_genres) * 100
 
 Las contribuciones son bienvenidas! Por favor:
 
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+## 🤝 Contribuciones
+
+Este es un proyecto de portafolio personal. Si tenés sugerencias, podés abrir un issue en GitHub.
 
 ## 📄 Licencia
 
