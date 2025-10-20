@@ -2,11 +2,10 @@ from airflow import DAG
 from datetime import datetime
 from airflow.operators.bash import BashOperator
 from airflow.operators.python import PythonOperator
-from email.policy import default
 from datetime import datetime, timedelta
 import sys
 import os
-from pandas import json_normalize
+
 #Definicion del DAG 
 
 # Agrega el path del dag y va a encontrar el main en src

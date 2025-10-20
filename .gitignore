@@ -1,0 +1,28 @@
+# Entorno virtual
+venv/
+
+# Archivos de entorno y credenciales
+.env
+.env.*
+
+# Archivos automáticos de Python
+__pycache__/
+*.pyc
+
+# Archivos temporales o de datos locales
+*.csv
+data/outputs/
+
+# Archivos db del proyecto
+*.db
+*.sqlite
+
+# mypy
+.mypy_cache/
+
+# pytest
+.pytest_cache/
+.cache
+
+# Archivos temporales
+*.tmp

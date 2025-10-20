@@ -17,6 +17,6 @@ class PostgreSQLLoader:
         self.engine = create_engine(conn_str)
         print(f"✅ PostgreSQL conectado: {host}:{port}/{db}")
     
-    def load_data(self, df, table_name='spotify_data'):
-        df.to_sql(table_name, self.engine, if_exists='replace', index=False)
-        print(f"✅ Cargados {len(df)} registros en {table_name}")
+    def load_data(self, df_final, table_name='spotify_data'):
+        df_final.to_sql(table_name, self.engine, if_exists='replace', index=False)
+        print(f"✅ Cargados {len(df_final)} registros en {table_name}")

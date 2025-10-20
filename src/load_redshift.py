@@ -27,7 +27,7 @@ class RedshiftLoader:
         )
         print(f"✅ Redshift conectado: {self.host}/{self.database}")
     
-    def load_data(self, df_final, table_name, if_exists='replace'):
+    def load_data(self, df_final, table_name='Artist_Spotify', if_exists='replace'):
         """
         Carga DataFrame a Redshift
         
