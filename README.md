@@ -22,7 +22,7 @@ Pipeline ETL completo que extrae, transforma y analiza datos de artistas musical
 - ✅ Extracción de datos vía Spotify Web API
 - ✅ Limpieza y transformación con Pandas
 - ✅ Análisis de métricas avanzadas (engagement rate, diversificación)
-- ✅ Visualizaciones profesionales con Matplotlib/Seaborn
+- ✅ Visualizaciones con Matplotlib/Seaborn
 - ✅ Generación automática de insights y reportes
 
 ## 🎯 Objetivos
@@ -154,11 +154,11 @@ spotify-analytics/
 
 ```
 
-## 📊 Métricas Calculadas Scrip aparte no compartido
+## 📊 Métricas Calculadas Analysis.py
 
 ### Engagement Rate
 ```python
-engagement_rate = (popularity / followers) * 1_000_000
+engagement_rate = (popularity / followers) * 1000000
 ```
 *Indica qué tan efectiva es la popularidad relativa al tamaño de audiencia*
 
