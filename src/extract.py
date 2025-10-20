@@ -42,8 +42,8 @@ class SpotifyExtractor:
 
         if response.status_code == 200:
             token_data = response.json()
-            self.token = token_data.get("access_token")  # Nueva linea
-            token_type = token_data.get("token_type")    # Nueva linea
+            self.token = token_data.get("access_token")  
+            token_type = token_data.get("token_type")    
         else:
             print("Error en la solicitud:")
             print("Código de estado:", response.status_code)
@@ -54,10 +54,10 @@ class SpotifyExtractor:
         """
         artist_ids_list = "%2C".join(artist_ids)
         country = "ES"
-        auth_headers = {"Authorization": "Bearer " + self.token}  # Nueva linea
+        auth_headers = {"Authorization": "Bearer " + self.token}  
         url = f"https://api.spotify.com/v1/artists?ids={artist_ids_list}"
 
-        response = requests.get(url, headers=auth_headers)  # Nueva linea
+        response = requests.get(url, headers=auth_headers)  
 
         if response.status_code == 200:
             data_artist = response.json()
@@ -76,10 +76,10 @@ class SpotifyExtractor:
         """Extrae álbumes de artistas"""
         artist_albums_url = "https://api.spotify.com/v1/artists/{}/albums"
         lista_albums = []
-        auth_headers = {"Authorization": "Bearer " + self.token}  # Nueva linea
+        auth_headers = {"Authorization": "Bearer " + self.token}  
 
-        for artist_id in artist_ids:  # Cambiado de artists_ids a artist_ids # Nueva linea
-            response = requests.get(artist_albums_url.format(artist_id), headers=auth_headers)  # Nueva linea
+        for artist_id in artist_ids:  
+            response = requests.get(artist_albums_url.format(artist_id), headers=auth_headers)  
 
             if response.status_code == 200:
                 data_albums = response.json()
@@ -99,8 +99,8 @@ class SpotifyExtractor:
                                     "release_date": artist.get("release_date"),
                                     "total_tracks": artist.get("total_tracks")
                                 }
-                                artist_list.append(artist_details)  # Nueva linea: mover append antes de asignar
-                            album_info[term] = artist_list  # Nueva linea
+                                artist_list.append(artist_details)  
+                            album_info[term] = artist_list  
                         else:
                             album_info[term] = album_info.get(term, None)
                     
@@ -113,19 +113,19 @@ class SpotifyExtractor:
 
         df_albums = pd.DataFrame(lista_albums)
         df_albums = df_albums[['name', 'release_date', 'total_tracks', 'popularity']]
-        return df_albums  # Nueva linea
+        return df_albums  
 
     def get_top_tracks(self, artist_ids):
         """Extrae top tracks de artistas"""
         artist_top_tracks_url = "https://api.spotify.com/v1/artists/{}/top-tracks"
-        auth_headers = {"Authorization": "Bearer " + self.token}  # Nueva linea
+        auth_headers = {"Authorization": "Bearer " + self.token}  
 
         lista_top_tracks = []
 
-        for artist_id in artist_ids:  # Cambiado de artists_ids a artist_ids # Nueva linea
+        for artist_id in artist_ids:  
             response = requests.get(
                 artist_top_tracks_url.format(artist_id),
-                headers=auth_headers,  # Nueva linea
+                headers=auth_headers,  
                 params={"country": "US"}
             )
 
@@ -141,7 +141,7 @@ class SpotifyExtractor:
 
         df_top_tracks = pd.DataFrame(lista_top_tracks)
         df_top_tracks = df_top_tracks[["id", "name", "popularity","artist_id"]]
-        return df_top_tracks  # Nueva linea
+        return df_top_tracks  
 
 
 

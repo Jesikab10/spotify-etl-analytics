@@ -43,7 +43,7 @@ Pipeline ETL completo que extrae, transforma y analiza datos de artistas musical
 | **Spotify API** | Extracción de datos |
 | **SQLAlchemy** | Conexión a bases de datos |
 | **Docker** | Containerización |
-| **Apache Airflow** | Orquestación de pipelines |
+| **Apache Airflow** |En construccion - Orquestación de pipelines |
 
 ## 📊 Datos Analizados
 

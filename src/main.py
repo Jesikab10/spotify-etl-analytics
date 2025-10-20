@@ -25,7 +25,7 @@ def run_pipeline():
     df_final = transformer.transform_all(df_artists, df_albums, df_tracks)
     print(f"✅ {len(df_final)} registros")
     
-    # LOAD - Selector automático
+    # LOAD - Selector automático LOADER_TYPE
     print(f"\n Cargando en su seleccion: {LOADER_TYPE.upper()}...")
     
     if LOADER_TYPE == 'sqlite':
